@@ -14,3 +14,13 @@
 PRICE = [0, 1, 2, 1, 3, 1, 2, 1, 3, 1, 2, 1, 3, 1, 2, 1] 
 
 # Решение будет здесь
+import sys
+sys.setrecursionlimit(10000000)
+s[0]=0
+
+for i in range(1, 16):
+    if i >4:
+        s[i] = PRICE[i]+min(PRICE[i-1],PRICE[i-2],PRICE[i-4])
+    if i
+
+
