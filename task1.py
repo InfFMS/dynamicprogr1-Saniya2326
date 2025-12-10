@@ -9,3 +9,23 @@
 """
 
 # Решение будет здесь
+
+import sys
+sys.setrecursionlimit(10000000)
+F = [0]*1000
+
+
+def t(n):
+    if n < 20:
+        return 0
+    if n == 20:
+        return 1
+    elif F[n] != 0:
+        return F[n]
+    else:
+        F[n] = t(n-1)+t(n-2)+t(n-4)
+        return F[n]
+
+
+print(t(30))
+
